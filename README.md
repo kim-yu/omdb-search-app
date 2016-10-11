@@ -6,6 +6,11 @@ The only requirement is that you have Node.js installed. The recommended version
 
 ## Setup (REQUIRED)
 
+Start by cloning the project and installing the node modules:
+
+    git clone git@github.com:Wexcode/webpack-babel-react.git
+    npm install
+
 Your application will not compile until you create a copy of `config.json.sample`.
 
     cp config.json.sample config.json
