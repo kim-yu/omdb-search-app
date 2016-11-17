@@ -42,4 +42,4 @@ var MovieList = React.createClass({
 	}
 });
 
-module.exports = MovieList;
+export default MovieList;

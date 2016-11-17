@@ -23,8 +23,7 @@ var SearchBox = React.createClass({
 		this.state.buttonClicked = true;
 		var query = this.state.query;
 		axios.get('http://www.omdbapi.com/?s='+{query}).then(function(response) {
-			store.dispatch({
-				type: 'MOVIE_LIST_SUCCESS',
+			this.setState({
 				movies: response.data.Search,
 				buttonClicked: true
 			});
