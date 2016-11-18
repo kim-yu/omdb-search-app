@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { connect } from 'react-redux'
 import store from '../store'
 import reducer from '../reducer'
@@ -20,13 +19,13 @@ var SearchBox = React.createClass({
 	},
 
 	findMovies: function () {
-		this.state.buttonClicked = true;
 		var query = this.state.query;
-		axios.get('http://www.omdbapi.com/?s='+{query}).then(function(response) {
-			this.setState({
-				movies: response.data.Search,
-				buttonClicked: true
-			});
+		fetch('http://www.omdbapi.com/?s='+query).then((response) => {
+			return response.json().then((json) => {
+				this.setState({
+					movies: json.Search
+				});
+			})
 		});
 	},
 
