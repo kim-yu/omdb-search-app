@@ -1,11 +1,17 @@
 import './style.css';
-import SearchBox from './SearchBox'
+import store from '../store'
+import getMoviesSuccess from '../actions'
+import SearchForm from './SearchForm'
+import SearchFormContainer from './SearchFormContainer'
+import MovieList from './MovieList'
+import MovieListContainer from './MovieListContainer'
 
 export default class Index extends React.Component {
   	render() {
 	    return (
 	    	<div>
-	    		<SearchBox query={this.props.query}/>
+	    		<SearchFormContainer />
+	    		<MovieListContainer />
 	    	</div>
 	    );
 	}
