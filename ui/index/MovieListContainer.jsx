@@ -1,18 +1,24 @@
-import MovieList from './MovieList'
+import MovieList from './MovieList';
+import { connect } from 'react-redux';
+import * as api from '../api';
+import store from '../store';
+import { getMoviesSuccess } from '../actions';
 
-var MovieListContainer = React.createClass({
-	componentDidMount: function() {
-
-	},
-
+const MovieListContainer = React.createClass({
 	render: function() {
+		let searchResults = store.getState();
 		return (
 			<div>
-				<h4>Results</h4>
-				<MovieList movies={this.movies} />
+				<MovieList movies={this.props.movies} />
 			</div>
 		);
 	}
 });
 
-export default MovieListContainer;
+const mapStateToProps = function(store) {
+	return {
+		movies: store.movies
+	};
+};
+
+export default connect(mapStateToProps)(MovieListContainer);
