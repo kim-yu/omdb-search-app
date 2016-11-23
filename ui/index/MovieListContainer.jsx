@@ -8,7 +8,7 @@ const MovieListContainer = React.createClass({
 	render: function() {
 		let searchResults = store.getState();
 		return (
-			<div>
+			<div className="movie-list-container">
 				<MovieList movies={this.props.movies} />
 			</div>
 		);

@@ -2,6 +2,12 @@ import SearchForm from './SearchForm'
 import * as api from '../api'
 
 var SearchFormContainer = React.createClass({
+
+	getInitialState: function() {
+		return {
+			buttonClicked: false
+		}
+	},
 	
 	search: function(event) {
 		event.preventDefault();
@@ -9,6 +15,7 @@ var SearchFormContainer = React.createClass({
 		let query = this.refs.child.getQuery();
 
 		api.searchMovies(query);
+		this.setState({buttonClicked: true});
 	},
 
 	render: function() {
