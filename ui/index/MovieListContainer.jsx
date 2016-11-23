@@ -1,6 +1,5 @@
 import MovieList from './MovieList';
 import { connect } from 'react-redux';
-import * as api from '../api';
 import store from '../store';
 import { getMoviesSuccess } from '../actions';
 
