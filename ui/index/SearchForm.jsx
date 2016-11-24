@@ -1,6 +1,22 @@
+var Results = React.createClass({
+	render: function() {
+		return (
+			<div id="results" className="search-results">
+				<h4>Results</h4>
+			</div>
+		);
+	}
+});
+
 var SearchForm = React.createClass({
+	getInitialState: function() {
+		return {
+			showResults: false
+		};
+	},
 
 	getQuery: function() {
+		this.setState({ showResults: true });
 		return this.refs.search.value;
 	},
 
@@ -13,6 +29,7 @@ var SearchForm = React.createClass({
 					<br />
 					<button>FIND MY MOVIES!</button>
 				</form>
+				{ this.state.showResults ? <Results /> : null }
 			</div>
 		);
 	}

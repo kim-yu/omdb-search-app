@@ -1,14 +1,14 @@
 import MovieList from './MovieList';
 import { connect } from 'react-redux';
 import store from '../store';
-import { getMoviesSuccess } from '../actions';
+import { getMoviesSuccess, movieSelected } from '../actions';
 
 const MovieListContainer = React.createClass({
 	render: function() {
 		let searchResults = store.getState();
 		return (
 			<div className="movie-list-container">
-				<MovieList movies={this.props.movies} />
+				<MovieList movies={this.props.movies} selectMovie={this.props.selectedMovie}/>
 			</div>
 		);
 	}
@@ -16,7 +16,8 @@ const MovieListContainer = React.createClass({
 
 const mapStateToProps = function(store) {
 	return {
-		movies: store.movies
+		movies: store.movies,
+		selectedMovie: store.selectedMovie
 	};
 };
 
