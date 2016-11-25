@@ -15,7 +15,7 @@ var MovieProfile = React.createClass({
 				</button><br /><br />
 				<img src={movie.Poster} className="poster" />
 				<div className="movie-details">
-					<h4>Title: {movie.Title}</h4><br />
+					<h3>Title: {movie.Title}</h3><br />
 					Rated: {movie.Rated}<br /><br />
 					Plot: {movie.Plot}<br /><br />
 					Released: {movie.Released}<br /><br />

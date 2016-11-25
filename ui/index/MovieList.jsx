@@ -12,13 +12,11 @@ var MovieList = React.createClass({
 				{movies.map((movie) => {
 					let boundMovieClick = this.onMovieClick.bind(this, movie.imdbID);
 					return (
-						<div key={movie.imdbID} onClick={boundMovieClick}>
-							<button key={movie.imdbID} className="movie-list-item">
-								<div className="details">
-									{movie.Title} ({movie.Year})
-								</div>
-							</button>
-						</div>
+						<button key={movie.imdbID} className="movie-list-item" onClick={boundMovieClick}>
+							<div className="details">
+								{movie.Title.toUpperCase()} ({movie.Year})
+							</div>
+						</button>
 					);
 				})}
 			</div>

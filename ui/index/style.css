@@ -8,19 +8,30 @@ form button {
 	background-color: white;
 	border-width: 0.5px;
 	padding: 10px;
-	width: 200px;
+	width: 230px;
+}
+
+.movie-list-container {
+	max-width: 1200px;
+	text-align: center;
 }
 
 .movie-list button {
 	background-color: white;
-	border-width: 0.5px;
+	border-width: 0.3px;
 	padding: 10px;
+	margin: 10px;
 	width: 500px;
+}
+
+.movie-list-item {
+	text-align: center;
+	vertical-align: center;
 }
 
 .movie-profile {
 	margin: 30px;
-	max-width: 1500px;
+	max-width: 1200px;
 }
 
 .x-button {
@@ -36,13 +47,17 @@ form button {
 
 .poster {
 	margin-top: 0px;
-	float: left;
-	max-width: 500px;
+	max-width: 300px;
+	display: inline-block;
+	padding: 40px;
+	vertical-align: top;
 }
 
 .movie-details {
 	margin-top: 0px;
-	float: right;
+	padding: 40px;
 	text-align: left;
-	max-width: 800px;
+	display: inline-block;
+	max-width: 600px;
+	font-family: Georgia;
 }
