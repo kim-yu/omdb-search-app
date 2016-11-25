@@ -5,10 +5,9 @@ import { getMoviesSuccess, movieSelected } from '../actions';
 
 const MovieListContainer = React.createClass({
 	render: function() {
-		let searchResults = store.getState();
 		return (
 			<div className="movie-list-container">
-				<MovieList movies={this.props.movies} selectMovie={this.props.selectedMovie}/>
+				<MovieList movies={this.props.movies} selectMovie={this.props.selectedMovie} />
 			</div>
 		);
 	}

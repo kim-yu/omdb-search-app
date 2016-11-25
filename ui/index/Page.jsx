@@ -2,10 +2,12 @@ import SearchFormContainer from './SearchFormContainer';
 import MovieListContainer from './MovieListContainer';
 import MovieProfile from './MovieProfile';
 import store from '../store';
+import { connect } from 'react-redux';
 
-var Page = React.createClass({
+
+const Page = React.createClass({
 	render: function() {
-		if (store.getState().viewMovie) {
+		if (this.props.viewMovie) {
 			return (
 				<div>
 					<MovieProfile />
@@ -22,4 +24,10 @@ var Page = React.createClass({
 	}
 });
 
-export default Page;
+const mapStateToProps = function(store) {
+	return {
+		viewMovie: store.viewMovie
+	};
+};
+
+export default connect(mapStateToProps)(Page);
