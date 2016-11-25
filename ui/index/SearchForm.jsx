@@ -1,3 +1,5 @@
+import store from '../store';
+
 var Results = React.createClass({
 	render: function() {
 		return (
@@ -21,10 +23,14 @@ var SearchForm = React.createClass({
 	},
 
 	render: function() {
+		let originalQuery = store.getState().query;
+		if (originalQuery == '') {
+			originalQuery = '';
+		}
 		return (
 			<div>
 				<form onSubmit={this.props.search} className="search">
-					Search titles: <input type="text" placeholder="Toy Story 3" ref="search"/>
+					Search titles: <input type="text" placeholder="Toy Story 3" defaultValue={originalQuery} ref="search"/>
 					<br />
 					<br />
 					<button>FIND MY MOVIES!</button>

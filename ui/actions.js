@@ -1,6 +1,6 @@
 export function getQuerySuccess(query) {
 	return {
-		type: 'GET_QUERY_SUCCES',
+		type: 'GET_QUERY_SUCCESS',
 		query
 	}
 }

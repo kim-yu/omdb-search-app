@@ -25,14 +25,23 @@ form button {
 
 .x-button {
 	float: right;
+	background-color: white;
+	border: none;
+}
+
+.x-button img {
+	max-width: 50px;
+	max-height: 50px;
 }
 
 .poster {
+	margin-top: 0px;
 	float: left;
 	max-width: 500px;
 }
 
 .movie-details {
+	margin-top: 0px;
 	float: right;
 	text-align: left;
 	max-width: 800px;
